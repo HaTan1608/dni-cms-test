@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "scss": "sass src/main.scss src/main.css --watch --no-source-map --style compressed",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "concurrently \" npm start \" \"npm run scss \""
