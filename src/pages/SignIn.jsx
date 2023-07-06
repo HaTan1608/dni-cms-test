@@ -38,7 +38,7 @@ const SignIn = () => {
           </Form.Item>
 
           <div className="signin__form__submit">
-            <div onClick={() => formInfo.submit()}>Gửi thông tin</div>
+            <div onClick={() => formInfo.submit()}>Đăng nhập</div>
           </div>
         </Form>
       </div>
