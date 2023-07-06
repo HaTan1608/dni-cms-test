@@ -61,11 +61,24 @@
         }
       }
       input {
-        margin-top: 16px;
+        margin-top: 12px;
         border: none;
         padding: 4px 0;
         border-bottom: solid 1px #000;
         border-radius: 0;
+      }
+    }
+    &__submit {
+      margin-top: 12px;
+      padding-bottom: 16px;
+      div {
+        background: rgb(103, 64, 180);
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        padding: 6px 12px;
+        width: 110px;
+        text-align: center;
       }
     }
   }

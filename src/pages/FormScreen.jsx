@@ -1,10 +1,18 @@
-import { Form, Input } from "antd";
+import { Form, Input, message } from "antd";
 import React from "react";
 
 const FormScreen = () => {
+  const [formInfo] = Form.useForm();
+  const handleFinish = (e) => {
+    console.log(e);
+  };
   return (
     <div className="formScreen">
-      <Form className="formScreen__form">
+      <Form
+        form={formInfo}
+        onFinish={handleFinish}
+        className="formScreen__form"
+      >
         <div className="formScreen__form__info">
           <div className="formScreen__form__info__bar"></div>
           <p className="formScreen__form__info__header">
@@ -65,32 +73,44 @@ const FormScreen = () => {
           <span>
             Họ Và Tên <span>*</span>
           </span>
-          <Form.Item required>
-            <Input />
+          <Form.Item
+            name="username"
+            rules={[{ required: true, message: "Vui lòng không bỏ trống" }]}
+          >
+            <Input placeholder="Nhập họ và tên" />
           </Form.Item>
         </div>
         <div className="formScreen__form__input">
           <span>
             Số Điện Thoại - Chính <span>*</span>
           </span>
-          <Form.Item required>
-            <Input />
+          <Form.Item
+            name="phone"
+            rules={[{ required: true, message: "Vui lòng không bỏ trống" }]}
+          >
+            <Input placeholder="Nhập số Điện Thoại - Chính" />
           </Form.Item>
         </div>
         <div className="formScreen__form__input">
           <span>
             Số Điện Thoại - Số Zalo <span>*</span>
           </span>
-          <Form.Item required>
-            <Input />
+          <Form.Item
+            name="zalo"
+            rules={[{ required: true, message: "Vui lòng không bỏ trống" }]}
+          >
+            <Input placeholder="Nhập số Điện Thoại - Số Zalo" />
           </Form.Item>
         </div>
         <div className="formScreen__form__input">
           <span>
             User Telegram của bạn là gì? <span>*</span>
           </span>
-          <Form.Item required>
-            <Input />
+          <Form.Item
+            name="telegram"
+            rules={[{ required: true, message: "Vui lòng không bỏ trống" }]}
+          >
+            <Input placeholder="Nhập User Telegram của bạn" />
           </Form.Item>
         </div>
         <div className="formScreen__form__input">
@@ -98,16 +118,22 @@ const FormScreen = () => {
             Gmail đăng ký tài khoản Exness
             <span>*</span>
           </span>
-          <Form.Item required>
-            <Input />
+          <Form.Item
+            name="mail"
+            rules={[{ required: true, message: "Vui lòng không bỏ trống" }]}
+          >
+            <Input placeholder="Nhập Gmail đăng ký tài khoản Exness" />
           </Form.Item>
         </div>
         <div className="formScreen__form__input">
           <span>
             ID đang giao dịch <span>*</span>
           </span>
-          <Form.Item required>
-            <Input />
+          <Form.Item
+            name="idtrade"
+            rules={[{ required: true, message: "Vui lòng không bỏ trống" }]}
+          >
+            <Input placeholder="Nhập ID đang giao dịch" />
           </Form.Item>
         </div>
         <div className="formScreen__form__input">
@@ -115,11 +141,17 @@ const FormScreen = () => {
             Bạn đang giao dịch với số vốn bao nhiêu ? Và mong muốn lợi nhuận bao
             nhiêu % / năm ? <span>*</span>
           </span>
-          <Form.Item required>
+          <Form.Item
+            name="loinhuan"
+            rules={[{ required: true, message: "Vui lòng không bỏ trống" }]}
+          >
             <Input />
           </Form.Item>
         </div>
-        <div className="formScreen__form__input">
+        <div
+          className="formScreen__form__input"
+          style={{ paddingBottom: "12px" }}
+        >
           <p>
             <b>
               <i>Link đăng ký tài khoản mới:</i>
@@ -147,6 +179,9 @@ const FormScreen = () => {
               <i>Mã đối tác:</i>&nbsp;8845268
             </b>
           </p>
+        </div>
+        <div className="formScreen__form__submit">
+          <div onClick={() => formInfo.submit()}>Gửi thông tin</div>
         </div>
       </Form>
     </div>
