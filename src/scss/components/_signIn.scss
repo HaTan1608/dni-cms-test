@@ -1,13 +1,14 @@
-.formScreen__background {
+.signin__background {
   position: fixed;
   top: -20%;
   left: -5%;
 }
-.mainBackground {
+.signin__mainBackground {
   background: rgb(56, 114, 174);
-  height: 1800px;
+  min-height: 100vh;
+  width: 100vw;
 }
-.formScreen {
+.signin {
   min-height: 100vh;
   width: 100vw;
   padding-top: 12px;
@@ -15,34 +16,24 @@
 
   &__form {
     max-width: 90vw;
-    width: 640px;
+    width: 480px;
     margin: auto;
     font-size: 11pt;
     line-height: 15pt;
     letter-spacing: 0;
     z-index: 1;
     position: absolute;
-    left: 50%;
+    left: calc(50% + 80px);
+    background: #fff;
+    border-radius: 8px;
+    top: 25%;
+    padding: 24px;
+
     a {
       text-decoration: underline;
     }
     &__info {
-      background: #fff;
-      border-radius: 8px;
-      border: 1px solid rgb(218, 220, 224);
-      position: relative;
-      padding: 24px;
-      &__bar {
-        background-color: rgb(103, 58, 183);
-        color: rgba(255, 255, 255, 1);
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-        height: 10px;
-        left: -1px;
-        position: absolute;
-        top: -1px;
-        width: calc(100% + 2px);
-      }
+      text-align: center;
       &__header {
         font-size: 24pt;
         font-weight: 900;
@@ -83,16 +74,19 @@
     }
     &__submit {
       margin-top: 12px;
-      padding-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       div {
-        background: #fff;
+        background: rgb(56, 114, 174);
         border-radius: 5px;
-        color: rgb(56, 114, 174);
+        color: #fff;
         cursor: pointer;
         padding: 6px 12px;
         width: 110px;
         text-align: center;
         font-weight: bold;
+        border: 1px solid rgb(56, 114, 174);
       }
     }
   }
