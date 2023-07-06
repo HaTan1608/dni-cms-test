@@ -1,11 +1,11 @@
 .formScreen__background {
   position: fixed;
-  top: -20%;
+  top: -15%;
   left: -5%;
 }
 .mainBackground {
   background: rgb(56, 114, 174);
-  height: 1800px;
+  height: 1900px;
 }
 .formScreen {
   min-height: 100vh;
@@ -45,7 +45,7 @@
       }
       &__header {
         font-size: 24pt;
-        font-weight: 900;
+        font-weight: 700;
         color: #202124;
         line-height: 135%;
       }
@@ -90,7 +90,7 @@
         color: rgb(56, 114, 174);
         cursor: pointer;
         padding: 6px 12px;
-        width: 110px;
+        width: 130px;
         text-align: center;
         font-weight: bold;
       }
